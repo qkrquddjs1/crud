@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ohgiraffers.crud.menu.model.dao.CarMapper">
+
+    <select id="findAllCar" resultType="com.ohgiraffers.crud.menu.model.dto.CarDTO">
+        SELECT
+            car_code,
+            car_company,
+            car_name,
+            car_number
+        FROM
+            car
+    </select>
+
+    <insert id="registCar">
+        INSERT INTO
+            car(car_company, car_name, car_number)
+        VALUES
+            (#{ carCompany}, #{carName}, #{carNumber})
+    </insert>
+
+
+</mapper>

@@ -1,0 +1,44 @@
+package com.ohgiraffers.crud.menu.model.dto;
+
+public class CategoryDTO {
+
+    private int categoryCode;
+    private String categoryName;
+    private int refCategoryCode;
+
+    public CategoryDTO() {
+    }
+
+    public int getCategoryCode() {
+        return categoryCode;
+    }
+
+    public void setCategoryCode(int categoryCode) {
+        this.categoryCode = categoryCode;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
+    public int getRefCategoryCode() {
+        return refCategoryCode;
+    }
+
+    public void setRefCategoryCode(int refCategoryCode) {
+        this.refCategoryCode = refCategoryCode;
+    }
+
+    @Override
+    public String toString() {
+        return "CategoryDTO{" +
+                "categoryCode=" + categoryCode +
+                ", categoryName='" + categoryName + '\'' +
+                ", refCategoryCode=" + refCategoryCode +
+                '}';
+    }
+}
